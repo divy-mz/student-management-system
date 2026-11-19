@@ -1,0 +1,41 @@
+### Add first student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{"studentId":101,"studentName":"Rahul","email":"rahul@example.com","courseName":"CSE","programmingScore":90,"mathematicsScore":80,"technicalSkills":["Java","MySQL"]}
+
+### Add second student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{"studentId":102,"studentName":"Aman","email":"aman@example.com","courseName":"CSE","programmingScore":40,"mathematicsScore":90,"technicalSkills":["Java","HTML"]}
+
+### All
+GET http://localhost:8080/students
+
+### ID
+GET http://localhost:8080/students/101
+
+### Merit
+GET http://localhost:8080/students/merit
+
+### Common skills
+GET http://localhost:8080/students/skills
+
+### Improvement
+GET http://localhost:8080/students/improvement
+
+### Email
+GET http://localhost:8080/students/email/rahul@example.com
+
+### Course
+GET http://localhost:8080/students/course/CSE
+
+### Update
+PUT http://localhost:8080/students/101
+Content-Type: application/json
+
+{"programmingScore":95,"mathematicsScore":85,"technicalSkills":["Java","Spring Boot"]}
+
+### Delete
+DELETE http://localhost:8080/students/101
